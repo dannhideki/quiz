@@ -8,7 +8,7 @@ import org.hibernate.Transaction;
 
 /**
  *
- * @author hideki
+ * @author Daniel Hideki
  */
 public class DificuldadeDao implements DaoInterface<Dificuldade, Integer>{
 

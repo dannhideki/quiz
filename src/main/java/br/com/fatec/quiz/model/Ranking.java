@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author hideki
+ * @author Daniel Hideki
  */
 @Entity
 @Table

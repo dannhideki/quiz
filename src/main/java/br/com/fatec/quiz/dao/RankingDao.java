@@ -8,7 +8,7 @@ import org.hibernate.Transaction;
 
 /**
  *
- * @author hideki
+ * @author Daniel Hideki
  */
 public class RankingDao implements DaoInterface<Ranking, Integer> {
 
@@ -78,5 +78,4 @@ public class RankingDao implements DaoInterface<Ranking, Integer> {
     public void setCurrentTransaction(Transaction currentTransaction) {
         this.currentTransaction = currentTransaction;
     }
-
 }

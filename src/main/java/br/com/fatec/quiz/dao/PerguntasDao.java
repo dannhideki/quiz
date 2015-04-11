@@ -1,6 +1,5 @@
 package br.com.fatec.quiz.dao;
 
-import br.com.fatec.quiz.enums.DificuldadeEnum;
 import br.com.fatec.quiz.model.Dificuldade;
 import br.com.fatec.quiz.model.Perguntas;
 import br.com.fatec.quiz.model.Respostas;
@@ -8,14 +7,12 @@ import static br.com.fatec.quiz.util.HibernateUtil.getSessionFactory;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 /**
  *
- * @author hideki
+ * @author Daniel Hideki
  */
 public class PerguntasDao implements DaoInterface<Perguntas, Integer> {
 
@@ -79,7 +76,6 @@ public class PerguntasDao implements DaoInterface<Perguntas, Integer> {
         return perguntasList;
     }
 
-    //SELECT * FROM PERGUNTAS INNER JOIN RESPOSTAS ON PERGUNTAS.RESPOSTA_ID = RESPOSTAS.ID
     public List<Perguntas> trazPerguntasERespostas() {
         List<Perguntas> perguntasList = new ArrayList<>();
 
@@ -107,7 +103,6 @@ public class PerguntasDao implements DaoInterface<Perguntas, Integer> {
             pergunta.setDificuldade(dificuldade);
             perguntasList.add(pergunta);
         }
-
         return perguntasList;
     }
 
@@ -117,7 +112,6 @@ public class PerguntasDao implements DaoInterface<Perguntas, Integer> {
         List objList = getCurrentSession()
                 .createSQLQuery(sql)
                 .list();
-        //List<Perguntas> perguntasList = (List<Perguntas>) getCurrentSession().createQuery("from Perguntas pergunta join pergunta.resposta").list();
         for (Object object : objList) {
             Object[] row = (Object[]) object;
             Perguntas pergunta = new Perguntas();
@@ -131,7 +125,6 @@ public class PerguntasDao implements DaoInterface<Perguntas, Integer> {
             pergunta.setExplicacao((String) row[3]);
             perguntasList.add(pergunta);
         }
-
         return perguntasList;
     }
 
@@ -150,5 +143,4 @@ public class PerguntasDao implements DaoInterface<Perguntas, Integer> {
     public void setCurrentTransaction(Transaction currentTransaction) {
         this.currentTransaction = currentTransaction;
     }
-
 }

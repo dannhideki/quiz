@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  *
- * @author hideki
+ * @author Daniel Hideki
  */
 public class PerguntasService {
 

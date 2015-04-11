@@ -2,7 +2,6 @@ package br.com.fatec.quiz.dao;
 
 import br.com.fatec.quiz.model.Respostas;
 import static br.com.fatec.quiz.util.HibernateUtil.getSessionFactory;
-import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Session;
@@ -10,7 +9,7 @@ import org.hibernate.Transaction;
 
 /**
  *
- * @author hideki
+ * @author Daniel Hideki
  */
 public class RespostasDao implements DaoInterface<Respostas, Integer> {
 
@@ -80,10 +79,8 @@ public class RespostasDao implements DaoInterface<Respostas, Integer> {
             resposta.setResposta(descricao);
             respostasList.add(resposta);
         }
-        
         return respostasList;
     }
-
 
     public Session getCurrentSession() {
         return currentSession;
@@ -100,5 +97,4 @@ public class RespostasDao implements DaoInterface<Respostas, Integer> {
     public void setCurrentTransaction(Transaction currentTransaction) {
         this.currentTransaction = currentTransaction;
     }
-
 }

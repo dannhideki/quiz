@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  *
- * @author hideki
+ * @author Daniel Hideki
  * @param <T>
  * @param <Id>
  */
